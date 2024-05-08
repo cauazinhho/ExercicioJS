@@ -1,0 +1,20 @@
+// Imprimir os primeiros 10 números da sequência de Fibonacci
+
+let fib1 = 0;
+let fib2 = 1;
+
+console.log("Os primeiros 10 numeros da sequencia de Fibonacci são: ");
+console.log(fib1);
+console.log(fib2);
+
+for(let i =2; i <10; i++){
+    let nextfib = fib1 + fib2;
+    console.log(nextfib);
+
+    //atualizar os valores de fib1 e fib2 para os proximos calculos
+    // nextfib = 1
+    // fib1 = 0
+    // fib2 = 1
+    fib1 = fib2;
+    fib2 = nextfib;
+}

@@ -1,6 +1,22 @@
 //Faça um programa que imprima na tela a tabuada de um número
 //qualquer escolhido pelo usuário até o 10.
 
-for(let num=1; num <=10; num++){
-   console.log(num + " x " + num + " = " + (num*cont))
+// for(let num=1; num <=10; num++){
+//    console.log(num + " x " + num + " = " + (num*cont))
+// }
+
+let numero = parseInt(prompt("Digite um numero: "))
+
+if(!isNaN(numero)){
+    for(let num =1; num <=10; num++){
+        console.log(numero + "x" + num + "=" + (numero*num));
+    }
+}else{
+    console.log("Numero invalido, digite numero correto");
 }
+
+
+console.log(isNaN("Óla"));
+console.log(isNaN(123));
+
+// isNaN - Que fala que nao é um numero

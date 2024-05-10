@@ -5,6 +5,43 @@
 
 //O usuario devera digitar 0 para sair do menu.
 
+do {
+    menu = parseInt(prompt("Digite um número (Digite 0 para sair)"))
+} while (menu !== 0)
+
+let menu = prompt("Escolhe uma das opções a seguir: \n1 - Calculo de idade \n2 - Exercicio de IMC \n3 - Leia as Notas Escolar \n4 - Qual dos dias da semana você deseja \n5 - Contador de numero ímpares \n6 - Contador de contagem regressiva ")
+
+
+switch (menu) {
+
+    case "1":
+        calculoIdade()
+        break;
+
+    case "2":
+        IMC()
+        break;
+
+    case "3":
+        leiaNota()
+        break;
+
+    case "4":
+        dia()
+        break;
+
+    case "5":
+        contadorImpar()
+        break;
+
+    case "6":
+        contagemRegressiva()
+        break;
+
+    default:
+        break;
+}
+
 function calculoIdade() {
     let idade = parseInt(prompt("Digite seu ano de nascimento: "))
 
@@ -136,42 +173,6 @@ function contagemRegressiva() {
 
 
 
-let menu = prompt("Escolhe uma das opções a seguir: \n1 - Calculo de idade \n2 - Exercicio de IMC \n3 - Leia as Notas Escolar \n4 - Qual dos dias da semana você deseja \n5 - Contador de numero ímpares \n6 - Contador de contagem regressiva ")
-
-
-switch (menu) {
-
-        case "1":
-            calculoIdade()
-            break;
-
-        case "2":
-            IMC()
-            break;
-
-        case "3":
-            leiaNota()
-            break;
-
-        case "4":
-            dia()
-            break;
-
-        case "5":
-            contadorImpar()
-            break;
-
-        case "6":
-            contagemRegressiva()
-            break;
-
-        default:
-            break;
-    }
-
-    do {
-        menu = parseInt(prompt("Digite um número (Digite 0 para sair)"))
-    } while (menu !== 0)
 
 
 

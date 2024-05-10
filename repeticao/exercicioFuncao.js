@@ -48,19 +48,133 @@ function IMC() {
     }
 }
 
-let opcao = prompt("Escolhe uma das opções a seguir: \n1 - Calculo de idade \n2 - Exercicio de IMC ")
+function leiaNota() {
+    let nota1 = parseFloat(prompt("Digite a primeira nota: "))
+    let nota2 = parseFloat(prompt("Digite a segunda nota: "))
+    let nota3 = parseFloat(prompt("Digite a terceira nota: "))
+    let nota4 = parseFloat(prompt("Digite a quarta nota: "))
 
-switch (opcao) {
-    case "1":
-        calculoIdade()
-        break;
+    let media = (nota1 + nota2 + nota3 + nota4) / 4
+    console.log(media)
 
-    case "2":
-        IMC()
-        break;
+    if (media >= 7) {
+        console.log("Você foi APROVADO!!!")
+    }
+    else if (media < 7 && media >= 5) {
+        console.log("Você está de recuperação")
+    }
+    else {
+        console.log("Você foi REPROVADO!!")
+    }
 
-    default:
-        break;
 }
+
+function dia() {
+    let dia = prompt("Digite o dia que você deseja")
+
+
+
+    if (dia == "1") {
+        console.log("segunda-feira")
+    }
+
+    if (dia == "2") {
+        console.log("Terça-feira")
+    }
+
+    if (dia == "3") {
+        console.log("Quarta-feira")
+    }
+
+    if (dia == "4") {
+        console.log("Quinta-feira")
+    }
+
+    if (dia == "5") {
+        console.log("Sexta-feira")
+    }
+
+    if (dia == "6") {
+        console.log("Sabado")
+    }
+
+    if (dia == "7") {
+        console.log("Domingo")
+    }
+}
+
+function contadorImpar() {
+    for (let contador = 0; contador <= 50; contador++) {
+
+
+        if (contador % 2 != 0) {
+            console.log(contador)
+        }
+
+    }
+
+    for (let contador = 0; contador <= 50; contador++) {
+
+        if (contador % 2 !== 0) {
+            console.log(contador)
+        }
+
+    }
+}
+function contagemRegressiva() {
+    let num = parseInt(prompt("Digite um numero para contagem regressiva: "));
+
+    console.log("Contagem regressiva está começando em: " + numero);
+
+    while (numero >= 0) {
+        console.log(numero);
+        numero--;
+    }
+
+    console.log("Contagem regressiva finalizada!!");
+}
+
+
+
+let menu = prompt("Escolhe uma das opções a seguir: \n1 - Calculo de idade \n2 - Exercicio de IMC \n3 - Leia as Notas Escolar \n4 - Qual dos dias da semana você deseja \n5 - Contador de numero ímpares \n6 - Contador de contagem regressiva ")
+
+
+switch (menu) {
+
+        case "1":
+            calculoIdade()
+            break;
+
+        case "2":
+            IMC()
+            break;
+
+        case "3":
+            leiaNota()
+            break;
+
+        case "4":
+            dia()
+            break;
+
+        case "5":
+            contadorImpar()
+            break;
+
+        case "6":
+            contagemRegressiva()
+            break;
+
+        default:
+            break;
+    }
+
+    do {
+        menu = parseInt(prompt("Digite um número (Digite 0 para sair)"))
+    } while (menu !== 0)
+
+
+
+
 
 

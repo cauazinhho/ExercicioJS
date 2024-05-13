@@ -1,4 +1,4 @@
-document.body.innerHTML = "<h1>Teste H1</h1>"
+document.body.innerHTML += "<h1>Teste H1</h1>"
 document.body.innerHTML += '<p id="texto">Outro Teste H1</p>'
 
 let paragrafo = document.getElementById(texto)
@@ -10,8 +10,43 @@ let opcao = prompt("Escolha a cor do paragrafo \n1 - Verde \n2 - Vermelho")
 if (opcao == "1") {
     paragrafo.style.color = "darkgreen"
 
-}else if (opcao == "2"){
+} else if (opcao == "2") {
     paragrafo.style.color = "red"
-}else {
+} else {
     window.alert("Opção Invalida")
+}
+
+let cliques = 0;
+
+const somarclique = () => {
+    // cliques = cliques +1
+    // cliques +=1
+    cliques++
+
+    let spanCliques = document.getElementById("#num-cliques")
+
+    spanCliques.innerHTML = cliques
+}
+
+// evento de mudar nome
+// da para usar num menu-hamburguer
+let tituloNome = document.querySelector("#titulo-nome")
+
+const mudarNome = () => {
+
+    tituloNome.innerHTML = "Thiago Nascimento"
+}
+
+tituloNome.addEventListener("click", mudarNome)
+
+// document.addEventListener("DOMContentLoaded", () => alert("ALOOOOOUU"))
+
+//fazendo funcao voltar
+
+function voltarPagina(){
+    window.history.back()
+}
+
+function fecharPagina(){
+    window.close()
 }
